@@ -72,13 +72,16 @@ public class NewsArticleService {
     }
 
 
-        public NewsArticle GetNewsArticlesByCategory(String  Category) {
+    public ArrayList GetNewsArticlesByCategory(String  Category) {
+
+        ArrayList matchingCategory = new ArrayList();
+
         for (NewsArticle newsArticle: articles) {
             if (newsArticle.getCategory().equalsIgnoreCase(Category)) {
-                return newsArticle;
+                matchingCategory.add(newsArticle);
             }
         }
-        return null;
+        return matchingCategory;
     }
 
 }
