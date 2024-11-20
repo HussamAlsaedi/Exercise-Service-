@@ -83,10 +83,10 @@ public class NewsArticleController {
     }
 
 
-    @GetMapping("/category/{category}")
+     @GetMapping("/category/{category}")
     public ResponseEntity getArticlesByCategory(@PathVariable String category)
     {
-        String categoryFound = newsService.GetNewsArticlesByCategory(category);
+        NewsArticle categoryFound = newsService.GetNewsArticlesByCategory(category);
 
         if (categoryFound != null) {
             return ResponseEntity.status(200).body(categoryFound);
