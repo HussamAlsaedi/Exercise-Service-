@@ -72,10 +72,10 @@ public class NewsArticleService {
     }
 
 
-    public String GetNewsArticlesByCategory(String  Category) {
+        public NewsArticle GetNewsArticlesByCategory(String  Category) {
         for (NewsArticle newsArticle: articles) {
             if (newsArticle.getCategory().equalsIgnoreCase(Category)) {
-                return newsArticle.getCategory();
+                return newsArticle;
             }
         }
         return null;
