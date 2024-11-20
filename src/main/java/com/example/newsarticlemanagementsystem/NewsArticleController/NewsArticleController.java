@@ -18,7 +18,7 @@ public class NewsArticleController {
     }
 
     @GetMapping("get")
-    public ResponseEntity getblog()
+    public ResponseEntity getArticle()
     {
         return ResponseEntity.ok(newsService.getAllArticles());
     }
